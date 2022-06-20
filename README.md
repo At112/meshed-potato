@@ -1,14 +1,10 @@
 # meshed-potato
- Deploy very simplistic REST API on Cloud of your choice (AWS, GCP, Azure, …) with IaaC. 
+#Deploy very simplistic REST API on Cloud of your choice (AWS, GCP, Azure, …) with IaaC. 
 
+In this code I am deploying REST API on AWS Fargate Containers using Terraform. 
 
-For example, in AWS this could be deploying AWS Lambda + AWS API Gateway with
-AWS CloudFormation. 
+A- I developed a REST API Application in flask using python and created an image and pushed to ECR.
+B- I deployed the application in Fargate containers using Terraform and enabled monitoring using cloudwatch. 
+C- I created the Route53 and ALB to route the traffic to the deployed application.
 
- 
- Additional questions: 
-o What would you monitor on the app? 
-o Which metrics would you set alerts on? 
-o Can we deploy the whole setup in new account? (In terms of disaster
-recovery) 
-o How would you protect the API from public access?
+Detailed instruction is in Documentation.docx file. 
