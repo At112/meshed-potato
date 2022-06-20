@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        
+        stage('Terraform Init and Plan') {
+            environment
+            {
+                AWS_ACCESS_KEY_ID     = credentials('JENKINS_AWS_ACCESS_KEY_ID')
+                AWS_SECRET_ACCESS_KEY = credentials('JENKINS_AWS_SECRET_ACCESS_KEY')
+            }
+            steps {
+                sh 'terraform init'
+                sh 'terraform plan'
+            }
+        }
+        stage('Terraform apply') {
+            environment
+            {
+                AWS_ACCESS_KEY_ID     = credentials('JENKINS_AWS_ACCESS_KEY_ID')
+                AWS_SECRET_ACCESS_KEY = credentials('JENKINS_AWS_SECRET_ACCESS_KEY')
+            }
+            steps {
+                sh 'terraform apply --auto-approve'
+            }
+        }
+    }
+}
