@@ -1,6 +1,6 @@
 
 
-//ECS cluster
+///ECS cluster
 
 resource "aws_ecs_cluster" "staging" {
   name = "${var.prefix}-cluster"
