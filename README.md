@@ -8,3 +8,4 @@ B- I deployed the application in Fargate containers using Terraform and enabled 
 C- I created the Route53 and ALB to route the traffic to the deployed application.
 
 Detailed instruction is in Documentation.docx file. 
+Email:Attique.atta@gmail.com
